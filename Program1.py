@@ -12,7 +12,7 @@ from typing import Text
 
 print("VIEN ANGELO BERNALES | BSCOE 1-1 \n")
 
-sentence = input("Enter your sentence: ")
+sentence = str(input("Enter your sentence: "))
 
 Input = sentence
 NumVowel = 0
@@ -20,21 +20,21 @@ NumConsonant = 0
 NumWords = 0 
 
 
-for NumVowel in Input:
-    if NumVowel in "AEIOUaeiou":
+for Vowel in Input:
+    if Vowel in "AEIOUaeiou":
         NumVowel = NumVowel + 1
 
-for NumConsonant in Input:
-    if NumConsonant in "BCDFGHJKLMNPQRSTVWXYZbcdfghjklmnpqrstvwxyz":
+for Consonant in Input:
+    if Consonant in "BCDFGHJKLMNPQRSTVWXYZbcdfghjklmnpqrstvwxyz":
         NumConsonant = NumConsonant + 1
 
-for space in Input:
-        if space == " ":
+countSpace = " "
+for count in Input:
+    for NumSpace in countSpace:
+        if count == NumSpace:
             NumWords = NumWords + 1
-            NumSpace = NumWords + 1
-        if NumWords == 0:
-            Numspace = 1
+            
 
-print(f"NUMBER OF WORDS: {NumWords}")
+print(f"NUMBER OF WORDS: {NumWords + 1}")
 print(f"NUMBER OF VOWELS: {NumVowel}")
 print(f"NUMBER OF CONSONANTS: {NumConsonant}")
